@@ -261,12 +261,20 @@ export default function App() {
               <ShieldAlert className="w-3.5 h-3.5 text-amber-400" />
               <span>Legal Terms</span>
             </button>
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-slate-800 text-teal-300 border border-slate-700 font-medium">
+            <button
+              onClick={() => setActiveTab("privacy")}
+              title="View Privacy & PII Masking Pipeline"
+              className="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-slate-800 hover:bg-slate-700 text-teal-300 border border-slate-700 font-medium transition cursor-pointer"
+            >
               <ShieldCheck className="w-4 h-4 text-teal-400" /> Presidio Masking Active
-            </span>
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-sky-950 text-cyan-300 border border-sky-800 font-semibold shadow-xs">
+            </button>
+            <button
+              onClick={() => setActiveTab("analysis")}
+              title="View Clause Risk Analysis"
+              className="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-sky-950 hover:bg-sky-900 text-cyan-300 border border-sky-800 font-semibold shadow-xs transition cursor-pointer"
+            >
               <Sparkles className="w-4 h-4 text-cyan-300" /> Gemini Powered
-            </span>
+            </button>
           </div>
         </div>
       </header>
@@ -315,9 +323,13 @@ export default function App() {
                   {isTextAreaCollapsed ? <ChevronDown className="w-3.5 h-3.5" /> : <ChevronUp className="w-3.5 h-3.5" />}
                   <span>{isTextAreaCollapsed ? "Expand Text" : "Compact View"}</span>
                 </button>
-                <span className="text-teal-300 font-bold flex items-center gap-1.5 bg-slate-800/80 px-2.5 py-1 rounded-lg border border-slate-700">
+                <button
+                  onClick={() => setActiveTab("privacy")}
+                  title="View Privacy & PII Masking details"
+                  className="text-teal-300 font-bold flex items-center gap-1.5 bg-slate-800/80 hover:bg-slate-700 px-2.5 py-1 rounded-lg border border-slate-700 transition cursor-pointer"
+                >
                   <ShieldCheck className="w-4 h-4 text-teal-400" /> PII Auto-Masking Active
-                </span>
+                </button>
               </div>
             </div>
 

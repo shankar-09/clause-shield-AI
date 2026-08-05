@@ -114,7 +114,14 @@ export const ClauseCard: React.FC<ClauseCardProps> = ({ clause, index, isForceEx
             </span>
           </div>
 
-          <button className="p-1 text-slate-400 hover:text-slate-800 transition">
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              setExpanded(!expanded);
+            }}
+            title={expanded ? "Collapse Clause" : "Expand Clause"}
+            className="p-1 text-slate-400 hover:text-slate-800 transition cursor-pointer"
+          >
             {expanded ? <ChevronUp className="w-5 h-5 text-sky-600" /> : <ChevronDown className="w-5 h-5 text-sky-600" />}
           </button>
         </div>
