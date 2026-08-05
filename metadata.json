@@ -1,0 +1,6 @@
+{
+  "name": "Legal Information Assistant",
+  "description": "AI-powered legal contract simplifier, clause risk analyzer, and plain-English negotiation assistant.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
